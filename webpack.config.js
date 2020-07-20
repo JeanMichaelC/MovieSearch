@@ -7,6 +7,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    devServer: {
+        open: true,
+        port: 9000
+    },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
     },
