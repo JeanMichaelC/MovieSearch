@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const HeaderS = styled.header`
-    background-color: #af2426;
+    background-color: #0066cc;
     height: 70px;
     display: flex;
     flex-direction: column;
