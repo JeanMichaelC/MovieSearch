@@ -9,6 +9,7 @@ const HeaderS = styled.header`
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
+    font-family: 'Roboto';
     color: white;
     padding: 20px;
     cursor: pointer;
