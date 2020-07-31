@@ -1,8 +1,15 @@
 import React, {FC, useState, useEffect} from 'react';
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import Header from './Header';
 import Movie from './Movie';
 import Search from './Search';
+
+const GlobalStyle = createGlobalStyle`
+    body {
+        margin: 0px;    
+        background-color: #fefefe;
+    }
+`;
 
 const StyledMoviesList = styled.div`
     display: flex;
@@ -44,6 +51,7 @@ const App: FC = () => {
 
     return (
         <>
+            <GlobalStyle />
             <Header text="MovieSearch" />
             <Search search={search} />
             <StyledMoviesList>
