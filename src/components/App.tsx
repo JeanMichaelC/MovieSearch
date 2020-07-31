@@ -4,7 +4,7 @@ import Header from './Header';
 import Movie from './Movie';
 import Search from './Search';
 
-const MoviesS = styled.div`
+const StyledMoviesList = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -30,7 +30,7 @@ const App: FC = () => {
         setLoading(true);
         setErrorMessage(null);
 
-        fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`)
+        fetch(`https://www.omdbapi.com/?s=${searchValue}&page=1&apikey=4a3b711b`)
             .then(response => response.json())
             .then(jsonResponse => {
                 if (jsonResponse.Response === "True") {
@@ -46,7 +46,7 @@ const App: FC = () => {
         <>
             <Header text="MovieSearch" />
             <Search search={search} />
-            <MoviesS>
+            <StyledMoviesList>
                 {loading && !errorMessage ? (
                     <span>loading...</span>
                 ) : errorMessage ? (
@@ -56,7 +56,7 @@ const App: FC = () => {
                         <Movie key={`${index}-${movie.Title}`} movie={movie} />
                     ))
                 )}
-            </MoviesS>
+            </StyledMoviesList>
         </>
     )
 }
