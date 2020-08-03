@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 const HeaderS = styled.header`
     background-color: #0066cc;
-    height: 70px;
+    background-color: #141414;
+    height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
-    padding: 20px;
-    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Recursive';
+    color: lightblue;
+    padding: 15px;
 `;
 
 

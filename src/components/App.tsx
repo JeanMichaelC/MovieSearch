@@ -1,10 +1,18 @@
 import React, {FC, useState, useEffect} from 'react';
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
 import Header from './Header';
 import Movie from './Movie';
 import Search from './Search';
 
-const MoviesS = styled.div`
+const GlobalStyle = createGlobalStyle`
+    body {
+        margin: 0px;    
+        background-color: #fefefe;
+        background-color: #141414;
+    }
+`;
+
+const StyledMoviesList = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -30,7 +38,7 @@ const App: FC = () => {
         setLoading(true);
         setErrorMessage(null);
 
-        fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=4a3b711b`)
+        fetch(`https://www.omdbapi.com/?s=${searchValue}&page=1&apikey=4a3b711b`)
             .then(response => response.json())
             .then(jsonResponse => {
                 if (jsonResponse.Response === "True") {
@@ -44,9 +52,10 @@ const App: FC = () => {
 
     return (
         <>
+            <GlobalStyle />
             <Header text="MovieSearch" />
             <Search search={search} />
-            <MoviesS>
+            <StyledMoviesList>
                 {loading && !errorMessage ? (
                     <span>loading...</span>
                 ) : errorMessage ? (
@@ -56,7 +65,7 @@ const App: FC = () => {
                         <Movie key={`${index}-${movie.Title}`} movie={movie} />
                     ))
                 )}
-            </MoviesS>
+            </StyledMoviesList>
         </>
     )
 }
