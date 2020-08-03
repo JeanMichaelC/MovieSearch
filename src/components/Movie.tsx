@@ -9,7 +9,8 @@ const StyledMovieAnchor = styled.a`
     color: #eee;
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.15);
+        transition: 0.3s ease-out;
     }
 `;
 

@@ -4,21 +4,51 @@ import styled from 'styled-components';
 const FormS = styled.form`
     display: flex;
     justify-content: center;
-    margin: 40px 0 20px;
+    margin: 20px 0;
 
     & .texty {
         width: 40vw;
-        height: 2em;
+        height: 2.5em;
         border-radius: 5px;
-        border: 1px solid gray;
-        background-color: #eee;
+        border: 1px solid lightgray;
+        background-color: #141414;
+        padding: 0 15px;
+        color: lightgray;
+        font-family: 'Roboto';
+        font-size: 1em;
+        &::placeholder {
+            color: lightgray;
+        }
+
+        &:hover {
+            background-color: #242424;
+        }
+        &:focus {
+            outline: none;
+            border: 2px solid lightgray;
+            background-color: #242424;
+        }
     }
     & .submy {
-        background-color: lightblue;
-        color: #555;
-        border: none;
+        background-color: #141414;
+        color: lightgray;
+        border: 1px solid lightgray;
+        padding: 0 15px;
         margin-left: 10px;
         border-radius: 5px;
+        font-family: 'Roboto';
+        font-size: 1em;
+        cursor: pointer;
+
+        &:active {
+            background-color: #242424;
+            transform: scale(1.1);
+            border: 1px solid lightgray;
+        }
+        &:focus {
+            outline: none;
+            border: 1px solid lightgray;
+        }
     }
 `;
 
