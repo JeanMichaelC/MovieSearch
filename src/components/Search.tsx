@@ -65,7 +65,15 @@ const Search = (props: any) => {
 
     const callSearchFunction = (e: any) => {
         e.preventDefault();
-        props.search(searchValue);
+        let searchValToCall = searchValue;
+        let lastChar = searchValue[searchValue.length -1];
+
+        if (lastChar == ' ') {
+            searchValToCall = searchValue.slice(0, -1);
+            setSearchValue(searchValToCall);
+        }
+        
+        props.search(searchValToCall);
         resetInputField();
     }
 
