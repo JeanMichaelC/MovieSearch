@@ -1,5 +1,5 @@
-# Wellcome to Form_Challenge (By Jean Michael)
-
+# This is the MovieSearch!
+This is nothing more than an IMDb-based movie search view made with Reactjs.
 I assume you want to see what I've done so far. To view the project just follow these steps: 
 
 ### 1º Step: Clone the GitHub repo
