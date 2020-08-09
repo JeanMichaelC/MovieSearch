@@ -16,9 +16,11 @@ const StyledMoviesList = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
 `;
 
-const MOVIE_API_URL = 'https://www.omdbapi.com/?s=fresh&apikey=4a3b711b';
+const MOVIE_API_URL = 'https://www.omdbapi.com/?s=life&apikey=4a3b711b';
 
 const App: FC = () => {
     const [loading, setLoading] = useState(true);
