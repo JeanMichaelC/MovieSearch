@@ -12,14 +12,22 @@ const StyledMovieAnchor = styled.a`
         transform: scale(1.15);
         transition: 0.3s ease-out;
     }
+    &:not(:hover) {
+        transform: scale(1);
+        transition: 0.2s ease-in;
+    }
 `;
 
 interface MovieCardProps {
     backImgUrl: string;
 } 
 const StyledMovieCard = styled.div<MovieCardProps>`
-    width: 22vw;
-    height: 33vw;
+    width: 20vw;
+    height: 30vw;
+    min-width: 200px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 450px;
     border-radius: 10px;
 
     position: relative;
