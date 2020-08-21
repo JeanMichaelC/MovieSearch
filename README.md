@@ -17,7 +17,7 @@ You only need to type this in the project's folder terminal:
 ```
 npm run dev
 ```
-Remember that you will see the proyect in the localhost:8080
+Remember that you will see the proyect in the localhost:9000
 
 ## And that's all!
 I hope you like it 👋
