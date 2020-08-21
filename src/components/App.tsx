@@ -20,7 +20,7 @@ const StyledMoviesList = styled.div`
     margin-bottom: 60px;
 `;
 
-const MOVIE_API_URL = 'https://www.omdbapi.com/?s=life&apikey=4a3b711b';
+const MOVIE_API_URL = 'https://www.omdbapi.com/?s=life&apikey=518671f7';
 
 const App: FC = () => {
     const [loading, setLoading] = useState(true);
@@ -40,7 +40,7 @@ const App: FC = () => {
         setLoading(true);
         setErrorMessage(null);
 
-        fetch(`https://www.omdbapi.com/?s=${searchValue}&page=1&apikey=4a3b711b`)
+        fetch(`https://www.omdbapi.com/?s=${searchValue}&page=1&apikey=518671f7`)
             .then(response => response.json())
             .then(jsonResponse => {
                 if (jsonResponse.Response === "True") {
